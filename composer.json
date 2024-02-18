@@ -1,0 +1,16 @@
+{
+  "name": "cainho/sisenhas",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "drpidman",
+      "email": "augustocaio663@gmail.com"
+    }
+  ],
+  "require": {}
+}

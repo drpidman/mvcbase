@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Stop processing if already in the /public directory
+    RewriteRule ^public/ - [L]
+
+    # Static resources if they exist
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
+    RewriteRule (.+) public/$1 [L]
+
+    # Route all other requests
+    RewriteRule (.*) public/index.php?route=$1 [L,QSA]
+</IfModule>
+
+#Initialize mod_rewrite
+RewriteEngine On
+<FilesMatch "\.(html|htm|js|css)$">
+    FileETag None
+    <IfModule mod_headers.c>
+            Header unset ETag
+            Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+            Header set Pragma "no-cache"
+            Header set Expires "Wed, 12 Jan 1980 05:00:00 GMT"
+    </IfModule>
+</FilesMatch>

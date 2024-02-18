@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Varela Round";
+  src: url("../fonts/Varela_Round/VarelaRound-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+body {
+  background-color: #ffffff;
+}
+
+* {
+  font-family: "Varela Round", "Roboto Regular";
+}
+
+.form-floating-h1 {
+  background-color: #ffffff;
+  text-align: center;
+  width: 30%;
+  transform: translateY(-40px);
+}
+
+@media (max-width: 720px) {
+  .form-floating-h1 {
+    background-color: #ffffff;
+    text-align: center;
+    width: 100%;
+    transform: translateY(-40px);
+  }
+}
+
+.background-ofuscate {
+  background-color: #000000af;
+  backdrop-filter: blur(15px);
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.1px solid gainsboro;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.search-box .form-control {
+  border-radius: 0;
+  border: none;
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+}
+
+.search-box .form-control:focus {
+  box-shadow: none;
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+}
